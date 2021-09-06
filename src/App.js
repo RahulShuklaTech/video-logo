@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  const [showLogo, setShowLogo] = React.useState(true);
+  const [showLogo, setShowLogo] = React.useState(false);
   const [logo, setLogo] = React.useState(null);
 
 
@@ -21,7 +21,7 @@ function App() {
         
         <div className="video-container">
           <div className= "show-logo">
-            {showLogo && <img src = {logo} alt = "logo" />}
+            {showLogo ? <img src = {logo} alt = "logo" /> : null}
           </div>
           <ReactPlayer
             url="assets/video.mp4"
@@ -37,7 +37,7 @@ function App() {
           <div className = "logo three" onClick = {() => handleClick("assets/google-logo.png")}>
             <img src="assets/google-logo.png" alt="logo" />
           </div>
-          <div className = "logo four" alt="remove logo" onClick = {() => handleClick("")}>
+          <div className = "logo four" alt="remove logo" onClick = {() => setShowLogo(false) }>
             <img src="assets/remove.jpg" alt="logo" />
           </div>
         </div>

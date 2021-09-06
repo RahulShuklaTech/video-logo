@@ -34,8 +34,8 @@ img {
 .logo {
   max-height: 5rem;
   max-width: 5rem;
-  /* animation: slide 2s ease-in-out;
-  animation-delay: .2s; */
+  opacity: 0;
+ 
 }
 
 .container {
@@ -77,23 +77,24 @@ img {
 
 
 .one {
-  animation: slidedown 1s ease-in-out;
+ 
+  animation: slidedown 1s ease-in-out forwards;
   animation-delay: .2s;
 }
 
 
 .two {
-  animation: slideleft 1s ease-in-out;
+  animation: slideleft 1s ease-in-out forwards;
   animation-delay: 1s;
 }
 
 .three {
-  animation: slideleft 1s ease-in-out;
+  animation: slideleft 1s ease-in-out forwards;
   animation-delay: 2s;
 }
 
 .four {
-  animation: slideup 1s ease-in-out;
+  animation: slideup 1s ease-in-out forwards;
   animation-delay: 3s;
 }
 
