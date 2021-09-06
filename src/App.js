@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import ReactPlayer from 'react-player';
+import React from 'react';
 import './App.css';
 
 function App() {
+
+  const [showLogo, setShowLogo] = React.useState(true);
+  const [logo, setLogo] = React.useState(null);
+
+
+  const handleClick = (selectedLogo) => { 
+    showLogo ? setShowLogo(true) : setShowLogo(true);
+    setLogo(selectedLogo);
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Display Logo on Video</h1>
+      <div className="container">
+        
+        <div className="video-container">
+          <div className= "show-logo">
+            {showLogo && <img src = {logo} alt = "logo" />}
+          </div>
+          <ReactPlayer
+            url="assets/video.mp4"
+            controls={true} />
+        </div>
+        <div className="thumbs-container">
+          <div className = "logo" onClick = {() => handleClick("assets/amazon.jpg")}>
+            <img src="assets/amazon.jpg" alt="logo" />
+          </div>
+          <div className = "logo" onClick = {() => handleClick("assets/Facebook-logo.png")} >
+            <img src="assets/Facebook-logo.png" alt="logo" />
+          </div>
+          <div className = "logo" onClick = {() => handleClick("assets/google-logo.webp")}>
+            <img src="assets/google-logo.png" alt="logo" />
+          </div>
+          <div className = "logo" alt="remove logo" onClick = {() => handleClick("")}>
+            <img src="assets/remove.jpg" alt="logo" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
