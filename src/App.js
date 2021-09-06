@@ -28,16 +28,16 @@ function App() {
             controls={true} />
         </div>
         <div className="thumbs-container">
-          <div className = "logo" onClick = {() => handleClick("assets/amazon.jpg")}>
+          <div className = "logo one" onClick = {() => handleClick("assets/amazon.jpg")}>
             <img src="assets/amazon.jpg" alt="logo" />
           </div>
-          <div className = "logo" onClick = {() => handleClick("assets/Facebook-logo.png")} >
+          <div className = "logo two" onClick = {() => handleClick("assets/Facebook-logo.png")} >
             <img src="assets/Facebook-logo.png" alt="logo" />
           </div>
-          <div className = "logo" onClick = {() => handleClick("assets/google-logo.webp")}>
+          <div className = "logo three" onClick = {() => handleClick("assets/google-logo.png")}>
             <img src="assets/google-logo.png" alt="logo" />
           </div>
-          <div className = "logo" alt="remove logo" onClick = {() => handleClick("")}>
+          <div className = "logo four" alt="remove logo" onClick = {() => handleClick("")}>
             <img src="assets/remove.jpg" alt="logo" />
           </div>
         </div>
